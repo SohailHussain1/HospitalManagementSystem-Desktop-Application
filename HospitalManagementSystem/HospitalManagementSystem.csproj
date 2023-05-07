@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF90071C-2D62-4022-8335-2F57129EC31B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HospitalManagementSystem</RootNamespace>
+    <AssemblyName>HospitalManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="check.cs" />
+    <Compile Include="doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doctor.Designer.cs">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="info.Designer.cs">
+      <DependentUpon>info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patient.Designer.cs">
+      <DependentUpon>patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="room.Designer.cs">
+      <DependentUpon>room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="doctor.resx">
+      <DependentUpon>doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="info.resx">
+      <DependentUpon>info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patient.resx">
+      <DependentUpon>patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="room.resx">
+      <DependentUpon>room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asd-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heartbeat-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-doctor-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rooms-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-patients-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_Red Blue Simple Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24090.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_Red Blue Simple Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_Red Blue Simple Logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple Healthcare Medicine Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\v870-tang-36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple Healthcare Medicine Logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>HMS.mdf</DependentUpon>
+    </Content>
+    <Content Include="logindetails.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logindetails_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>logindetails.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\hospital-free-content-clip-art-png-favpng-D3Bxt5xLj6pq6PEci1u0tRkXi-removebg-preview.png" />
+    <None Include="Resources\hospital-free-content-clip-art-png-favpng-D3Bxt5xLj6pq6PEci1u0tRkXi.jpg" />
+    <None Include="Resources\png-clipart-red-i-icon-art-computer-icons-apple-icon-format-desktop-information-about-us-icon-miscellaneous-text-removebg-preview.png" />
+    <None Include="Resources\78-780819_back-button-png-red-photoshop-icon-transparent-png-removebg-preview.png" />
+    <None Include="Resources\1200px-Flat_cross_icon.svg.png" />
+    <None Include="Resources\approved-clipboard-icon-512-300x300.png" />
+    <None Include="Resources\images-removebg-preview.png" />
+    <None Include="Resources\291-2910758_patient-portal-records-health-record-icon-removebg-preview.png" />
+    <None Include="Resources\patient_information.png" />
+    <None Include="Resources\improvement.png" />
+    <None Include="Resources\patient-icon-9263.png" />
+    <None Include="Resources\4a4022a0a689ac8f06dcc8d30f81db28-doctor-silhouette-stethoscope.png" />
+    <None Include="Resources\png-transparent-doctor-illustration-physician-flat-design-icon-doctor-medical-record-material-infographic-people-public-relations-removebg-preview.png" />
+    <None Include="Resources\png-transparent-doctor-illustration-physician-flat-design-icon-doctor-medical-record-material-infographic-people-public-relations.png" />
+    <None Include="Resources\doctor-icon-cancel-sign-doctor-icon-close-delete-remove-symbol-doctor-icon-cancel-sign-doctor-icon-close-delete-116307461-removebg-preview.png" />
+    <None Include="Resources\doctor-icon-cancel-sign-doctor-icon-close-delete-remove-symbol-doctor-icon-cancel-sign-doctor-icon-close-delete-116307461.jpg" />
+    <None Include="Resources\3025-200.png" />
+    <None Include="Resources\Doctor_icons_stock_vector__Illustration_of_occupation_-_24355231-removebg-preview.png" />
+    <None Include="Resources\docotor.png" />
+    <None Include="Resources\placeholder.png" />
+    <None Include="Resources\hospital %281%29.png" />
+    <None Include="Resources\hospital-icon.png" />
+    <None Include="Resources\injured.png" />
+    <None Include="Resources\vecteezy_hospital-bed-in-circle-icon-intensive-care-unit-icon_-removebg-preview.png" />
+    <None Include="Resources\vecteezy_hospital-bed-in-circle-icon-intensive-care-unit-icon_.jpg" />
+    <None Include="Resources\clipart1717870.png" />
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\doctor.png" />
+    <None Include="Resources\Solid-Color-Backgrounds-Free-Download1.jpg" />
+    <None Include="Resources\Solid-Color-Backgrounds-Free-Download.jpg" />
+    <None Include="Resources\hospital.png" />
+    <None Include="Resources\vecteezy_medical-supervision-vector-icon-design_15745550-removebg-preview.png" />
+    <None Include="Resources\vecteezy_medical-supervision-vector-icon-design_15745550.jpg" />
+    <None Include="Resources\patient_room.png" />
+    <None Include="Resources\icons8-waiting-room-1001.png" />
+    <None Include="Resources\icons8-waiting-room-100.png" />
+    <None Include="Resources\New-room-icon.png" />
+    <None Include="Resources\Screenshot_2022-12-24_211822-removebg-preview.png" />
+    <None Include="Resources\Screenshot 2022-12-24 211822.png" />
+    <None Include="Resources\icons8-hospital-room-100.png" />
+    <None Include="Resources\hospital-bed.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\PinClipart.com_free-february-clip-art_1573079.png" />
+    <None Include="Resources\remove-employee-icon.png" />
+    <None Include="Resources\employees-icon-png-15.jpg" />
+    <None Include="Resources\Using+Employee+Voice+in+Open+Innovation-01.png" />
+    <None Include="Resources\icons8-name-tag-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
